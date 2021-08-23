@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/facai.ico" type="image/x-icon">
+    
+    
+    <meta name="theme-color" content="#9C117E">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="imagens/icon.png">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#9C117E">
+  <meta name="apple-mobile-web-app-title" content="Façaí">
+  <link rel="apple-touch-icon" href="imagens/logo.png">
+
+  <meta name="application-name" content="Façaí"/>
+  <meta name="msapplication-TileColor" content="#9C117E"/>
+
+
+
+    <link rel="stylesheet" href="css/nav-delivery-style.css">
+    <link rel="stylesheet" href="css/delivery-style.css">
+    <script src="js/script-delivery.JS" defer></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@5.5.0/keen-slider.min.css"
+    />
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/a2aaf93c90.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Faça seu Pedido | Façaí</title>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            
+            <div class="content-header">
+
+                    <picture class="logo">
+                        <a href="index.html">
+                            <source media="(max-width: 500px )" srcset="imagens/logofacai.png" type="image/png">
+                            <img class="logo" src="imagens/logo.png" alt="Logo Façaí">
+                        </a>
+                    </picture>
+
+                    <div class="ContainerSearc">  
+                        <div class="pesquisa">
+                            <input  onclick="AbrirPesquisa(this)" class="PesquisaProdutos" type="text" placeholder="Pesquisar por item...">
+                            <i class='bx bx-search'></i>
+                         </div>
+                    </div>
+
+                    
+                <div class="open-nav" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                
+                <nav class="menu">
+
+                    
+                    
+                    <ul class="list-menu">
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="planos">Ver Planos</a></li>
+                        <li class="contato"><a href="contato">Contato</a></li>
+                        <li class="btn-area-de-membros"><a href="area-de-membros.html">Área de membros</a></li>
+                        <li><a id="i-whatsapp"  href="https://wa.me/558382108331" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                        <li><a id="i-instagram" href="https://www.instagram.com/facaidoseujeito" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a id="i-facebook" href="https://www.facebook.com/facaidoseujeito" target="_blank"><i class="fa fa-facebook"></i></a></li>
+
+                        <li id="BtnLogin"><a href="login">Login</a></li>
+
+                        <div class="lista-menu-mobile">
+                            <li id="i-whatsapp-mobile"><a  href="https://wa.me/558382108331" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                            <li id="i-instagram-mobile"><a href="https://www.instagram.com/facaidoseujeito" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li id="i-facebook-mobile"><a href="https://www.facebook.com/facaidoseujeito" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        </div>
+                    </ul>
+                </nav>
+
+            </div> 
+
+        </div>
+    </header>
+      <div class="ContainerHeader" id="ContainerHeader">
+                <div class="FaçaSeuPedido">
+                    <div class="BoxHeader">
+                        <div class="animated-title">
+                            <div class="text-top">
+                              <div>
+                                <span>Bateu a fome?</span>
+                                <span>Quer se refrescar?</span>
+                              </div>
+                            </div>
+                            <div class="text-bottom">
+                              <div>#FaçaíSeuPedido</div>
+                            </div>
+                          </div>
+                    </div>
+
+                    <img id="GifDelivery" class="GifDelivery" src="imagens/delivery.gif">
+                    
+                    <div id="LetsGo">
+                        <button onclick="BtnHeader(this)"> <a href="#delivery"> Vamos Lá</a><i class='bx bx-chevron-right'></i></button>
+                    </div>
+                </div>
+                
+      </div>
+
+    <main>
+
+    <div class="section-delivery">
+            <div id="container-popup" class="section1">
+                <div class="share">
+                    <button id="close-popup"><i id="colorred" class="fa fa-times"></i></button>
+                    <img src="imagens/confetes.gif" alt="">
+                    <div class="texto">
+                        <h1>Convide Seus Amigos!</h1>
+                        <p>A cada amigo novo que vinher através de você, você e ele ganham R$2 de desconto na compra de qualquer produto</p>
+                    </div>
+                    <button class="btn-share">Convidar</button>
+                </div>
+            </div>
+
+<!------------------------------------------------------------------------------>
+            <div class="produtos"><div class="Carrossel">
+                <a name="delivery"></a>
+                                <div class="navigation-wrapper">
+                                    <div id="my-keen-slider" class="keen-slider">
+                                        <div class="keen-slider__slide number-slide1">1</div>
+                                        <div class="keen-slider__slide number-slide2">2</div>
+                                        <div class="keen-slider__slide number-slide3">3</div>
+                                        <div class="keen-slider__slide number-slide4">4</div>
+                                        <div class="keen-slider__slide number-slide5">5</div>
+                                        <div class="keen-slider__slide number-slide6">6</div>
+                                    </div>
+                                    <svg
+                                      id="arrow-left"
+                                      class="arrow arrow--left"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
+                                      ></path>
+                                    </svg>
+                                    <svg
+                                      id="arrow-right"
+                                      class="arrow arrow--right"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
+                                    </svg>
+                                  </div>
+                                  <div id="dots" class="dots"></div>
+                                  
+                                  <script src="https://cdn.jsdelivr.net/npm/keen-slider@5.5.0/keen-slider.min.js"></script>
+                                  
+                        </div>
+            
+                <ul class="escolher-produto">
+                <a class="titulo" name="produtos">O que você deseja saborear hoje?</a>
+                    <li id="btn-acai" onclick="ListAcai(this)">
+                            <img src="imagens/acai.png" alt="">
+                            <span>Açaí</span>
+                    </li>
+                     <li id="btn-morango" onclick="ListMorango(this)">
+                            <img src="imagens/morango.jpg" alt="">
+                            <span>Creme de Morango</span>
+                     </li>
+                    <li id="btn-ninho" onclick="ListNinho(this)">
+                            <img src="imagens/ninho.png" alt="">
+                            <span>Creme de Ninho</span>
+                    </li>
+                    <li id="btn-choconute" onclick="ListChoconute(this)">
+                            <img src="imagens/choconute.png" alt="">
+                            <span>Creme de Choconute</span>
+                    </li>
+                    <li id="btn-maracuja" onclick="ListMaracuja(this)">
+                            <img src="imagens/maracuja.jpg" alt="">
+                            <span>Creme de Maracuja</span>
+                    </li>
+                    <li id="btn-mix" onclick="ListMix(this)">
+                            <img src="imagens/mix.png" alt="">
+                            <span>Mix De Sabores</span>
+                    </li>
+                    <li id="btn-cupuacu" onclick="ListCupuacu(this)">
+                            <img src="imagens/cupuacu.png" alt="">
+                            <span>Cupuaçu</span>
+                    </li>
+                    <li id="btn-casadinho" onclick="ListCasadinho(this)">
+                            <img src="imagens/casadinho.png" alt="">
+                            <span>Casadinho</span>
+                     </li>
+                </ul>
+                
+               </div>
+
+        </div>
+                <!---------------------ACAI-------------------->
+                        <div id="list-acai">
+                            <ul>
+                                <div id="CloseListAcai"><i class='bx bx-chevron-left'></i></div>
+                                <li onclick="produto.salvar()" onclick="produto.lerDados1()" > 
+                                    <p>Açaí 250ml <br>  +7 complementos </p>
+                                    <p class="preco">R$12,00</p>
+                                    <input class="CheckTamanho" type="checkbox">
+                                </li>
+                                <li onclick="produto.salvar2()" onclick="produto.lerDados2()">
+                                    <p>Açaí 330ml <br>  +7 complementos</p>
+                                    <p class="preco">R$15,00</p>
+                                    <input class="CheckTamanho" type="checkbox">
+                                </li>
+                                <li onclick="produto.salvar3()" onclick="produto.lerDados3()">
+                                    <p>Açaí 500ml <br>  +7 complementos</p>
+                                    <p class="preco">R$23,00</p>
+                                    <input class="CheckTamanho" type="checkbox">
+                                </li>
+                                <li onclick="produto.salvar4()" onclick="produto.lerDados4()">
+                                    <p>Açaí 770ml <br>  +10 complementos</p>
+                                    <p class="preco">R$35,00</p>
+                                    <input class="CheckTamanho" type="checkbox">
+                                </li>
+                                <li onclick="produto.salvar5()" onclick="produto.lerDados5()">
+                                    <p>Açaí 1kg <br>  +10 complementos</p>
+                                    <p class="preco">R$45,00</p>
+                                    <input class="CheckTamanho" type="checkbox">
+                                </li>
+                            </ul>
+                            <div class="avancar-acai"> 
+                                <button class="btn-avancar-acai" onclick="proximoListAcai(this)" id="proximo">Avançar</button>
+                            </div>
+                        </div>
+
+                <!---------------------MORANGO----------------->
+                        <div id="list-morango">
+                            <ul>
+                                    <div id="CloseListMorango"><i class='bx bx-chevron-left'></i></div>
+                                    <li onclick="produto.salvar6()" onclick="produto.lerDados6()">
+                                        <p>Creme de Morango 250ml  <br> +7 complemento </p>
+                                        <p class="preco">R$14,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar7()" onclick="produto.lerDados7()">
+                                        <p>Creme de Morango 330ml  <br> +7 complementos</p>
+                                        <p class="preco">R$17,00</p>
+                                        <input class="CheckTamanho" type="checkbox"> 
+                                    </li>
+                                    <li onclick="produto.salvar8()" onclick="produto.lerDados8()">
+                                        <p>Creme de Morango 500ml  <br> +7 complementos</p>
+                                        <p class="preco">R$23,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar9()" onclick="produto.lerDados9()">
+                                        <p>Creme de Morango 770ml  <br> +10 complementos</p>
+                                        <p class="preco">R$35,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar10()" onclick="produto.lerDados10()">
+                                        <p>Creme de Morango 1kg  <br> +10 complementos</p>
+                                        <p class="preco">R$45,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                            </ul>
+                            <div class="avancar-morango"> 
+                                <div class="bolinhas-morango">
+                                    <p class="ball1-morango"></p><p class="ball2-morango"></p> <p class="ball3-morango"></p>
+                                </div>
+                                <button class="btn-avancar-morango" onclick="proximoListMorango(this)" id="proximo">Avançar</button>
+                            </div>
+                        </div>
+
+                <!-------------------NINHO------------------>
+                        <div id="list-ninho">
+                            <ul>
+                                <div id="CloseListNinho"><i class='bx bx-chevron-left'></i></div>
+                                    <li onclick="produto.salvar6()" onclick="produto.lerDados6()"> 
+                                        <p>Creme de Ninho 250ml <br>  +7 complementos </p>
+                                        <p class="preco">R$14,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar7()" onclick="produto.lerDados7()"> 
+                                        <p>Creme de Ninho 330ml <br>  +7 complementos</p> 
+                                        <p class="preco">R$17,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar8()" onclick="produto.lerDados8()">
+                                        <p>Creme de Ninho 500ml  <br> +7 complementos</p> 
+                                        <p class="preco">R$23,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar9()" onclick="produto.lerDados9()">  
+                                        <p>Creme de Ninho 770ml <br>  +10 complementos</p> 
+                                        <p class="preco">R$35,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar10()" onclick="produto.lerDados10()">  
+                                        <p>Creme de Ninho 1kg  <br> +10 complementos</p> 
+                                        <p class="preco">R$45,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                            </ul>
+                            <div class="avancar-ninho"> 
+                                <div class="bolinhas-ninho">
+                                    <p class="ball1-ninho"></p><p class="ball2-ninho"></p> <p class="ball3-ninho"></p>
+                                </div>
+                                <button class="btn-avancar-acai" onclick="proximoListNinho(this)" id="proximo">Avançar</button>
+                            </div>
+                        </div>
+
+                <!-------------------CHOCONUTE------------------>
+                        <div id="list-choconute">
+                            <ul>
+                                <div id="CloseListChoconute"><i class='bx bx-chevron-left'></i></div>
+                                    <li onclick="produto.salvar6()" onclick="produto.lerDados6()">
+                                        <p>Creme de Choconute 250ml <br> +7 complementos </p>
+                                        <p class="preco">R$14,00</p>
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar7()" onclick="produto.lerDados7()">
+                                        <p>Creme de Choconute 330ml <br> +7 complementos</p>
+                                        <p class="preco">R$17,00</p>
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar8()" onclick="produto.lerDados8()">
+                                        <p>Creme de Choconute 500ml <br> +7 complementos</p>
+                                        <p class="preco">R$23,00</p>
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar9()" onclick="produto.lerDados9()">
+                                        <p>Creme de Choconute 770ml <br> +10 complementos</p>
+                                        <p class="preco">R$35,00</p>
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar10()" onclick="produto.lerDados10()">
+                                        <p>Creme de Choconute 1kg <br> +10 complementos</p>
+                                        <p class="preco">R$45,00</p>
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                            </ul>
+                            <div class="avancar-choconute"> 
+                                <div class="bolinhas-choconute">
+                                    <p class="ball1-choconute"></p><p class="ball2-choconute"></p> <p class="ball3-choconute"></p>
+                                </div>
+                                <button class="btn-avancar-choconute" onclick="proximoListChoconute(this)" id="proximo">Avançar</button>
+                            </div>
+                        </div>
+
+                <!-------------------MARACUJA------------------>                        
+                        <div id="list-maracuja">
+                            <ul>
+                                <div id="CloseListMaracuja"><i class='bx bx-chevron-left'></i></div>
+                                    <li onclick="produto.salvar6()" onclick="produto.lerDados6()"> 
+                                        <p>Creme de Maracujá 250ml  <br> +7 complementos </p>
+                                        <p class="preco">R$14,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar7()" onclick="produto.lerDados7()"> 
+                                        <p>Creme de Maracujá 330ml <br>  +7 complementos</p> 
+                                        <p class="preco">R$17,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar8()" onclick="produto.lerDados8()">
+                                        <p>Creme de Maracujá 500ml <br>  +7 complementos</p> 
+                                        <p class="preco">R$23,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar9()" onclick="produto.lerDados9()">  
+                                        <p>Creme de Maracujá 770ml <br>  +10 complementos</p> 
+                                        <p class="preco">R$35,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                    <li onclick="produto.salvar10()" onclick="produto.lerDados10()">  
+                                        <p>Creme de Maracujá 1kg  <br> +10 complementos</p>
+                                        <p class="preco">R$45,00</p> 
+                                        <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                            </ul>
+                            <div class="avancar-maracuja"> 
+                                <div class="bolinhas-maracuja">
+                                    <p class="ball1-maracuja"></p><p class="ball2-maracuja"></p> <p class="ball3-maracuja"></p>
+                                </div>
+                                <button class="btn-avancar-maracuja" onclick="proximoListMaracuja(this)" id="proximo">Avançar</button>
+                            </div>
+                        </div>
+
+                <!-------------------MIX------------------>
+                        <div id="list-mix">
+                            <ul>
+                                <div id="CloseListMix"><i class='bx bx-chevron-left'></i></div>
+                                <li onclick="produto.salvar()" onclick="produto.lerDados1()"> 
+                                    <p> Mix 250ml <br>  +7 complementos </p>
+                                    <p class="preco">R$12,00</p> 
+                                    <input class="CheckTamanho" type="checkbox">
+                                </li>
+                                <li onclick="produto.salvar2()" onclick="produto.lerDados2()"> 
+                                    <p>Mix 330ml <br>  +7 complementos</p> 
+                                    <p class="preco">R$15,00</p>
+                                    <input class="CheckTamanho" type="checkbox">
+                                 </li>
+                                <li onclick="produto.salvar3()" onclick="produto.lerDados3()">
+                                    <p>Mix 500ml  <br> +7 complementos</p> 
+                                    <p class="preco">R$23,00</p> 
+                                    <input class="CheckTamanho" type="checkbox">
+                                </li>
+                                <li  onclick="produto.salvar4()" onclick="produto.lerDados4()"> 
+                                     <p>Mix 770ml  <br> +10 complementos</p> 
+                                     <p class="preco">R$35,00</p>
+                                     <input class="CheckTamanho" type="checkbox">
+                                 </li>
+                                <li onclick="produto.salvar5()" onclick="produto.lerDados5()"> 
+                                     <p>Mix 1kg <br>  +10 complementos</p>
+                                      <p class="preco">R$45,00</p> 
+                                      <input class="CheckTamanho" type="checkbox">
+                                </li>
+                            </ul>
+                            <div class="avancar-mix"> 
+                                <div class="bolinhas-mix">
+                                    <p class="ball1-mix"></p><p class="ball2-mix"></p> <p class="ball3-mix"></p>
+                                </div>
+                                <button class="btn-avancar-mix" onclick="proximoListMix(this)" id="proximo">Avançar</button>
+                            </div>
+                        </div>
+
+                <!-------------------CUPUACU------------------>
+                        <div id="list-cupuacu">
+                            <ul>
+                                <div id="CloseListCupuacu"><i class='bx bx-chevron-left'></i></div>
+                                <li onclick="produto.salvar()" onclick="produto.lerDados1()"> 
+                                    <p>Cupuçu 250ml  <br> +7 complementos </p>
+                                    <p class="preco">R$12,00</p> 
+                                    <input class="CheckTamanho" type="checkbox">
+                                </li>
+                                <li onclick="produto.salvar2()" onclick="produto.lerDados2()"> 
+                                    <p>Cupuçu 330ml  <br> +7 complementos</p> 
+                                    <p class="preco">R$15,00</p> 
+                                    <input class="CheckTamanho" type="checkbox">
+                                </li>
+                                <li  onclick="produto.salvar3()" onclick="produto.lerDados3()">
+                                    <p>Cupuçu 500ml  <br> +7 complementos</p> 
+                                    <p class="preco">R$23,00</p> 
+                                    <input class="CheckTamanho" type="checkbox">
+                                </li>
+                                <li onclick="produto.salvar4()" onclick="produto.lerDados4()">  
+                                    <p>Cupuçu 770ml  <br> +10 complementos</p> 
+                                    <p class="preco">R$35,00</p> 
+                                    <input class="CheckTamanho" type="checkbox">
+                                </li>
+                                <li onclick="produto.salvar5()" onclick="produto.lerDados5()">  
+                                    <p>Cupuçu 1kg <br>  +10 complementos</p>
+                                     <p class="preco">R$45,00</p> 
+                                     <input class="CheckTamanho" type="checkbox">
+                                </li>
+                            </ul>
+                            <div class="avancar-cupuacu"> 
+                                <div class="bolinhas-cupuacu">
+                                    <p class="ball1-cupuacu"></p><p class="ball2-cupuacu"></p> <p class="ball3-cupuacu"></p>
+                                </div>
+                                <button class="btn-avancar-cupuacu" onclick="proximoListCupuacu(this)" id="proximo">Avançar</button>
+                            </div>
+                        </div>
+
+                <!-------------------CASADINHO------------------>
+                        <div id="list-casadinho">
+                            <ul>
+                                <div id="CloseListCasadinho"><i class='bx bx-chevron-left'></i></div>
+                                <li onclick="produto.salvar()" onclick="produto.lerDados1()"> 
+                                    <p>Casadinho 250ml <br>  +7 complementos </p>
+                                    <p class="preco">R$12,00</p>
+                                    <input class="CheckTamanho" type="checkbox">
+                                 </li>
+                                <li onclick="produto.salvar2()" onclick="produto.lerDados2()">
+                                     <p>Casadinho 330ml  <br> +7 complementos</p>
+                                     <p class="preco">R$15,00</p> 
+                                     <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                <li onclick="produto.salvar3()"  onclick="produto.lerDados3()">
+                                     <p>Casadinho 500ml  <br> +7 complementos</p>
+                                      <p class="preco">R$23,00</p> 
+                                      <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                <li  onclick="produto.salvar4()" onclick="produto.lerDados4()"> 
+                                     <p>Casadinho 770ml  <br> +10 complementos</p> 
+                                     <p class="preco">R$35,00</p> 
+                                     <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                                <li onclick="produto.salvar5()" onclick="produto.lerDados5()"> 
+                                     <p>Casadinho 1kg  <br> +10 complementos</p>
+                                      <p class="preco">R$45,00</p> 
+                                      <input class="CheckTamanho" type="checkbox">
+                                    </li>
+                            </ul>
+                            <div class="avancar-casadinho"> 
+                                <div class="bolinhas-casadinho">
+                                    <p class="ball1-casadinho"></p><p class="ball2-casadinho"></p> <p class="ball3-casadinho"></p>
+                                </div>
+                                <button class="btn-avancar-casadinho" onclick="proximoListCasadinho(this)" id="proximo">Avançar</button>
+                            </div>
+                        </div>
+
+<!------------------------------Complementos--------------------------------------------->
+                     <div id="section-complementos">
+    
+                        <div class="sair-complementos">
+                            <h1 id="erro"></h1>
+                        </div>
+                        
+                        <div id="escolha-complementos">
+                            <div id="CloseListComplementos">
+                                <div  onclick="CloseContainerComplementos(this)"><i class='bx bx-chevron-left'></i></div>
+                            </div>
+                
+                            <h2>Escolha quais acompanhamentos você deseja receber no seu Casadinho</h2>
+                            <h1 id="selecionado"></h1>
+                            <ul id="p11">
+                                <li>
+                                    <img src="imagens/complementos/morango.jpg" alt="Morango">
+                                    <p>Morango</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/kiwi.jpg" alt="Kiwi">
+                                    <p>Kiwi</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/banana.jpg" alt="Banana">
+                                    <p>Banana</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/nutella.jpg" alt="Nutella">
+                                    <p>Nutella</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/amedoin.jpg" alt="Amedoin">
+                                    <p>Amedoin</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/mel.jpg" alt="Mel">
+                                    <p>Mel</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/paçoca.jpg" alt="Paçoca">
+                                    <p>Paçoca</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/bispreto.jpg" alt="Bis Preto">
+                                    <p>Bis Preto</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/bisbranco.png" alt="Bis branco">
+                                    <p>Bis branco</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/confetes.jpg" alt="Confetes">
+                                    <p>Confetes</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/farinhalactea.jpeg" alt="Farinha Láctea">
+                                    <p>Farinha láctea</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/finibananinha.jpg" alt="Fini Bananinha">
+                                    <p>Fini Bananinha</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/finidentadura.jpg" alt="Fini Dentadura">
+                                    <p>Fini Dentadura</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/marshmallow.jpg" alt="Marshmallow">
+                                    <p>Marshmallow</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/gotasdechocolate.jpg" alt="Gotas de Chocolate">
+                                    <p>Gotas de chocolate</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/granola.jpg" alt="Granola">
+                                    <p>Granola</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/jujuba.jpg" alt="Jujuba">
+                                    <p>Jujuba</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/kitkatpreto.jpg" alt="Kit Kat Preto">
+                                    <p>Kit Kat preto</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/kitkatbranco.jpg" alt="Kit Ket Branco">
+                                    <p>Kit Ket branco</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/leitecondensado.jpg" alt="Leite Condensado">
+                                    <p>Leite Condensado</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/leiteninho.jpg" alt="Leite Ninho">
+                                    <p>Leite ninho</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/ovomaltine.jpg" alt="Ovomaltine">
+                                    <p>ovomaltine</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/oreo.jpg" alt="Óreo">
+                                    <p>Óreo</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/sonhodevalsa.png" alt="Sonho de valsa">
+                                    <p>Sonho de valsa</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/serenatadeamor.jpg" alt="Serenata de Amor">
+                                    <p>Serenata de amor</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <img src="imagens/complementos/ourobranco.jpg" alt="Ouro Branco">
+                                    <p>ouro branco</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdComplementos">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                
+                
+                            </ul>
+                            
+                           
+                            </div>
+                            <div class="avancar-complementos"> 
+                                <div class="bolinhas-complementos">
+                                    <span class="ball1-complementos"></span>
+                                    <span class="ball2-complementos"></span>
+                                    <span class="ball3-complementos"></span>
+                                </div>
+                                <button class="btn-avancar-complementos" onclick="proximoComplementos(this)" id="proximo">Avançar</button>
+                            </div>
+                              
+                    </div>
+
+            <!--Adicionais-->
+                    <div id="SectionAdicionais">
+
+                        <div id="EscolherAdicionais">
+                            <div id="CloseListAdicionais">
+                                <div  onclick="CloseContainerAdicionais(this)"><i class='bx bx-chevron-left'></i></div>
+                            </div>
+                                <h4>Adicionais:</h4>
+                                <h5>Cada Adicional Custa R$1,00</h5>
+                            <ul>
+
+                                <li> 
+                                    <p>Morango</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li> 
+                                    <p>Kiwi</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Banana</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li> 
+                                    <p>Nutella</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li> 
+                                    <p>Amedoin</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li> 
+                                    <p>Mel</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Paçoca</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Bis Preto</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Bis branco</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Confetes</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Farinha láctea</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Fini Bananinha</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Fini Dentadura</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Marshmallow</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                     <p>Gotas de chocolate</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Granola</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Jujuba</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Kit Kat preto</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                   <p>Kit Ket branco</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Leite Condensado</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Leite ninho</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>ovomaltine</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                     <p>Óreo</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Sonho de valsa</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>Serenata de amor</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li>
+                                <li>
+                                    <p>ouro branco</p>
+                                    <span><i class='bx bxs-plus-circle' ></i><div class="qtdAdicionais">0</div> <i class='bx bxs-minus-circle' ></i></span>
+                                </li><br><br>
+                            </ul>
+                        <div class="avancar-adicionais"> 
+                            <div class="bolinhas-adicionais">
+                                <span class="ball1-adicionais"></span>
+                                <span class="ball2-adicionais"></span>
+                                <span class="ball3-adicionais"></span>
+                            </div>
+                            <button class="btn-avancar-adicionais" onclick="proximoAdicionais(this)" id="proximo">Avançar</button>
+                        </div>
+                        </div>
+                    </div>
+
+            <!--Talheres-->
+                    <div id="SectionTalher">
+
+                        <div id="EscolherTalher">
+                            <div id="CloseListTalher">
+                                <div  onclick="CloseContainerTalher(this)"><i class='bx bx-chevron-left'></i></div>
+                            </div>
+                                <h3>Deseja talheres descartáveis?</h3>
+                            <ul>
+                                <li><span>Sim</span> <input type="radio" name="" id=""></li>
+                                <li><span>Não</span> <input type="radio" name="" id=""></li>
+                            </ul>
+                        <div class="avancar-Talher"> 
+                            <div class="bolinhas-Talher">
+                                <span class="ball1-Talher"></span>
+                                <span class="ball2-Talher"></span>
+                                <span class="ball3-Talher"></span>
+                            </div>
+                            <button class="btn-avancar-Talher" onclick="proximoTalher(this)" id="proximo">Avançar</button>
+                        </div>
+                        </div>
+                    </div>
+                    
+            <!--container que pergunta se o cliente vai querer mias outro-->
+                    <div id="SectionQuestion">
+
+                        <div id="EscolherQuestion">
+                            <div id="CloseListQuestion">
+                                <div  onclick="CloseContainerQuestion(this)"><i class='bx bx-chevron-left'></i></div>
+                            </div>
+
+                                <h3>Deseja pedir mais outro produto para você, algum familiar ou amigo?</h3>
+                            <ul>
+                                <li onclick="CloseQuestion(this)"><span>Escolher mais outro produto<i class='bx bx-chevron-right'></i></span></li>
+                                <li onclick="proximoQuestion(this)"><span>Finalizar Pedido<i class='bx bxs-shopping-bag'></i></span></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+            <!--checkout-->
+            <div id="FundoCheckout">
+                <div id="container-checkout" class="container-checkout">
+                    <h1>Seu Pedido</h1>
+                    <i id="icon-cart" class='bx bx-shopping-bag' ></i>
+                    <button id="close-checkout" onclick="CloseCheckout(this)"><i id="colorred" style="color: #9c117e;" class="fa fa-times"></i></button>
+                    <div class="box-checkout">
+                        <div class="bag" id="bag">
+                            <div class="content">
+                                <table border="1">
+                                    <thead>
+                                        <th class="center">#</th>
+                                        <th>Produto</th>
+                                        <th>Valor</th>
+                                    </thead>
+                                    <tbody id="tbody">
+                
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="imgBag" id="imgBag">
+                                <img src="imagens/bag1.png" alt="">
+                            <p class="alert-bag-vazia">Sua sacola está Vazia</p>
+                            </div>
+                
+                        </div>
+                        <hr>
+                        <h2 class="total">Total:</h2>
+                        <h2 class="valor">R$00,00</h2>
+                        <div class="cupom">
+                            <p>Tem cumpom de desconto?</p>
+                            <input class="text-cupom" type="text" placeholder="Digite ele aqui...">
+                        </div>
+                        <h2 class="titulo-localização">Localização da entrega</h2>
+                        <h3 class="SubTituloLocalização">(Informe seu bairro, número da casa e ponto de referência)</h3>
+                        <input type="text" id="LocalEntrega" placeholder="Digite sua localização...">
+                        <!--<button id="btn-localização" class="localização">Selecionar</button>
+                        <div id="container-localização" class="select-local">
+                            <div class="casa">
+                                <i class='bx bx-home-heart'></i><p>Casa</p>
+                            </div>
+                            <div class="trabalho">
+                                <i class='bx bx-buildings'></i><p>Trabalho</p>
+                            </div>
+                            <div class="adicionar">
+                                <i class='bx bx-plus-circle'></i><p>Outra Localização</p>
+                            </div>
+                        </div>-->
+                        <div class="container-pagamento">
+                            <h2 class="titulo-pagamento">Forma de pagamento</h2>
+                            <div id="CheckCartao" class="cartão">
+                                <input type="radio"> <p>Pix/Cartão ou outro método online</p>
+                            </div>
+                            <div id="CheckMoney" class="dinheiro">
+                                <input type="radio"><p>Dinheiro</p>
+                            </div>
+                        </div>
+                                <div id="DinheiroHide">
+                                    <p>Precisa de troco?</p>
+                                    <input placeholder="Se sim, informe o valor aqui" type="text">
+                                </div>
+                        <h2 class="titulo-observação">Deixar Alguma Observação:</h2>
+                        <input class="observação" type="text" placeholder="Digite aqui...">
+                        <button class="btn-avançar">Finalizar Compra</button>
+                    </div>
+                
+                </div>
+            </div>
+            <div id="section-carrinho" class="section-carrinho">
+                <div  id="carrinho" class="carrinho">
+                    <div id="itensRed">0</div>
+                    <p>Ver Sacola</p><i class='bx bx-shopping-bag bx-tada'></i> 
+                </div>
+            </div>
+
+            <!-----------Rodapé------->
+            <div id="Footer" class="footer">
+                
+                <div class="main-footer">
+                    <div class="home">
+                        <a href="/"><i class='bx bx-home'></i> <p>Inicio</p></a>
+                    </div>
+
+                    <div id="CarrinhoMobile" onclick="Checkout(this)"  class="Sacola">
+                        <div id="ItensSacolaRed">0</div>
+                        <i id="Sacola" class='bx bx-shopping-bag bx-tada' ></i>
+                        <p id="SacolaTexto" >Sacola</p>
+                    </div>
+
+                    <div id="BtnChat" class="Chat" onclick="SendMenssage(this)">
+                        <div class="OnlineChat"> </div>
+                        <i class='bx bx-chat'></i>
+                        <p id="MensageText" >Chat</p>
+                    </div>
+
+                    
+                    <div id="BtnProfile" class="user">
+                       <i class='bx bx-user'></i><p>Perfil</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Mensagens-->
+            <div id="ContainerMenssage" class="ContainerMenssage">
+               
+
+               <div class="BoxMenssages">
+                   
+                    <div id="CloseMessages">
+                        <i class="fa fa-times" onclick="CloseSendMenssage(this)"></i>
+                    </div>
+                    <h1>Mande sua mensagem, estamos online!</h1>
+               </div> 
+
+            </div>
+
+            <!--Perfil-->
+            <div id="ContainerProfile" class="ContainerProfile">
+
+                <div id="CloseProfile"><i class="fa fa-times"></i></div>
+
+                <div class="LoginProfile">
+                    <div class="BtnLoginProfile">
+                        <a href="login.html">
+                            <i class='bx bx-log-in'></i>
+                            <sapn>Entrar ou se cadrastar </sapn>
+                            <i class='bx bx-chevron-right'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="Profile">
+                    <h1>Seu Nome</h1>
+                    <ul>
+                        <li id="BtnDados">
+                            <i class='bx bx-cog'></i>
+                            <span>Meus dados</span>
+                            <i class='bx bx-chevron-right'></i>
+                        </li>
+                        <li id="BtnPedidos">
+                            <i class='bx bx-message-alt-detail'></i>
+                            <span>Pedidos</span>
+                            <i class='bx bx-chevron-right'></i>
+                        </li>
+                        <li id="BtnFidelidade">
+                            <i class='bx bx-message-alt-detail'></i>
+                            <span>Fidelidade</span>
+                            <i class='bx bx-chevron-right'></i>
+                        </li>
+                        <li id="BtnCupons">
+                            <i class='bx bxs-offer'></i>
+                            <span>Cupons</span>
+                            <i class='bx bx-chevron-right'></i>
+                        </li>
+                        <li id="BtnFormaDePagamento">
+                            <i class='bx bx-credit-card'></i>
+                            <span>Forma de Pagamento</span>
+                            <i class='bx bx-chevron-right'></i>
+                        </li>
+                        
+                    </ul>
+
+                    <div id="LogOutProfile">
+                        <i class='bx bx-log-out'></i>
+                        <span>Sair</span>
+                    </div>
+                </div>
+                
+                <!---Dados---->
+                <div id="ContainerDados">
+                    <div id="CloseDados"><i class='bx bx-chevron-left'></i></div>
+                    <div class="BoxDados">
+                        <h1>Dados</h1>
+                        
+                        <div class="Dados">
+                            <h2>Nome: Gustavo Silva</h2>
+                            <h2>Email: gustavosilva@gmail.com</h2>
+                            <h2>WhatsApp: 83 9 9999-9999</h2>
+                            <h3>Mudar senha:</h3>
+                            <h4><label>Senha Antiga</label>
+                                <input type="password"placeholder="Digite a sua Senha">
+                                <br>
+                                <label>Confirmarção de senha</label>
+                                <input type="password" placeholder="Confirme a sua senha">
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+             
+                <!---Pedidos---->
+                <div id="ContainerPedidos">
+                    <div id="ClosePedidos"><i class='bx bx-chevron-left'></i></div>
+                    <div class="BoxPedidos">
+                        <h1>Pedidos</h1>
+                    </div>
+                </div>
+               
+                <!---Fidelidade---->
+                <div id="ContainerFidelidade">
+                    <div id="CloseFidelidade"><i class='bx bx-chevron-left'></i></div>
+                    <div class="BoxFidelidade">
+                        <h1>Fidelidade</h1>
+                    </div>
+                </div>
+
+                <!---Cupons---->
+                <div id="ContainerCupons">
+                    <div id="CloseCupons"><i class='bx bx-chevron-left'></i></div>
+                    <div class="BoxCupons">
+                        <h1>Cupons</h1>
+                    </div>
+                </div>
+
+                <!---FormaDePagamento---->
+                <div id="ContainerFormaDePagamento">
+                    <div id="CloseFormaDePagamento"><i class='bx bx-chevron-left'></i></div>
+                    <div class="BoxFormaDePagamento">
+                        <h1>Forma De Pagamento</h1>
+                    </div>
+                </div>
+
+            </div>
+            <!--------Search-------->
+            <div id="ContainerSearch" class="ContainerSearch">
+                <div id="CloseSearch"><i class="fa fa-times"></i></div>
+                <div class="AbaSearch">  
+                        <div>
+                            <ul class="ListaSearch">
+                                <li onclick="ListAcai(this)" nome="açaí"><span>Açaí</span></li>
+                                <li onclick="ListMorango(this)" nome="creme de morango"><span>Creme  de Morango</span></li>
+                                <li onclick="ListNinho(this)" nome="creme de ninho"><span>Creme de  Ninho</span></li>
+                                <li nome="creme de choconute"><span onclick="ListChoconute(this)">Creme de Choconute</span></li>
+                                <li onclick="ListMaracuja(this)" nome="creme de maracuja"><span>Creme de Maracuja</span></li>
+                                <li onclick="ListMix(this)" nome="mix"><span>Mix</span></li>
+                                <li onclick="ListCupuacu(this)" nome="cupuacu"><span>Cupuacu</span></li>
+                                <li onclick="ListCasadinho(this)" nome="casadinho"><span>Casadinho</span></li>
+                        
+                            </ul>
+                        </div>
+                </div>
+                        <script src="js/sistema_de_busca.js"></script>
+            </div>
+        </div>
+    </main>
+</body>
